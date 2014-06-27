@@ -1,0 +1,74 @@
+<html>
+ <head>
+  <title>The yo!lang Programming Language Reference Manual</title>
+  <style type="text/css">
+    body {
+      color: white;
+      background: #01b786;
+      text-align: center;
+      font-family:arial,sans-serif;
+    }
+    h1 {
+      font-size:700%;
+    }
+    a {
+      color: white;
+    }
+    textarea {
+      border:1px solid #999999;
+      font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+    }
+  </style>
+ </head>
+ <body>
+  <h1>Yo!</h1>
+  <p>I heard you like <a href="http://en.wikipedia.org/wiki/Esoteric_programming_language">esoteric programming languages</a>.</p>
+  <p>Here's one for you: yo!lang.<br />yo!lang is a <a href="http://en.wikipedia.org/wiki/Brainfuck">brainfuck</a> dialect, having only 8 commands operating on a instruction and a data pointer.</p>
+  
+  <p>Adapted from the <a href="http://en.wikipedia.org/wiki/Brainfuck">Wikipedia article on brainfuck</a>:</p>
+  <table style="margin: 0px auto;">
+    <tr>
+      <th>yo</th>
+      <td>increment the data pointer (to point to the next cell to the right).</td>
+    </tr>
+    <tr>
+      <th>YO</th>
+      <td>decrement the data pointer (to point to the next cell to the left).</td>
+    </tr>
+    <tr>
+      <th>Yo!</th>
+      <td>increment (increase by one) the byte at the data pointer.</td>
+    </tr>
+    <tr>
+      <th>Yo?</th>
+      <td>decrement (decrease by one) the byte at the data pointer.</td>
+    </tr>
+    <tr>
+      <th>YO!</th>
+      <td>output the byte at the data pointer.</td>
+    </tr>
+    <tr>
+      <th>yo?</th>
+      <td>accept one byte of input, storing its value in the byte at the data pointer.</td>
+    </tr>
+    <tr>
+      <th>yo!</th>
+      <td>if the byte at the data pointer is zero, then instead of moving the instruction pointer forward<br /> to the next command, jump it forward to the command after the matching <tt>YO?</tt> command.</td>
+    </tr>    
+    <tr>
+      <th>YO?</th>
+      <td>if the byte at the data pointer is nonzero, then instead of moving the instruction pointer forward<br /> to the next command, jump it back to the command after the matching <tt>yo!</tt> command.</td>
+    </tr>    
+  </table>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="footer">
+   <a href="http://yolang.org/">yo!lang</a> | <a href="reference.html">Reference Manual</a> | <a target="_blank" href="http://twitter.com/YoLanguage">@YoLanguage</a> | <a class="footer" href="mailto:yolang@yolang.org?Subject=Yo!&body=Yo!" target="_blank">yolang@yolang.org</a> | <a href="http://justyo.co/GROESTL">justyo.co/GROESTL</a> | &copy; 2014<br />
+   <small>The yo!lang is a fun project, inspired by (but not affiliated with) <a href="http://justyo.co">Yo! App</a>, the great zero-character messaging app.</small>
+  </div>
+ </body>
+</html>

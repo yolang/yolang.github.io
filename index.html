@@ -1,0 +1,89 @@
+<html>
+ <head>
+  <title>The yo!lang Programming Language</title>
+  <style type="text/css">
+    body {
+      color: white;
+      background: #01b786;
+      text-align: center;
+      font-family:arial,sans-serif;
+    }
+    h1 {
+      font-size:700%;
+    }
+    a {
+      color: white;
+    }
+    textarea {
+      border:1px solid #999999;
+      font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+    }
+  </style>
+ </head>
+ <body>
+  <h1>yo!lang<h1>
+  <h2>A zero-purpose programming language.</h2>
+  <h3>Inspired by a zero-character messaging app.</h3>
+
+
+<br />
+<br />
+Due to yo!lang's popularity, there are plenty of implementations!<br />
+<br />
+Use yo!lang for your favourite projects with
+<a href="https://github.com/yolang/yolang-java">Java</a>,
+<a href="https://github.com/yolang/yolang-llvm">LLVM</a>, or
+<a href="https://github.com/yolang/yolang-js">JavaScript</a>:
+<br />
+<br />
+<form>
+  <textarea id="code" cols="43" rows="13">
+  
+  Yo!Yo!  Yo!Yo!    Yo!Yo!Yo!      Yo!Yo!
+  Yo!Yo!  yo!yo   Yo!Yo!  Yo!Yo!   Yo!Yo!
+  Yo!Yo!  YOYo?   YO?yo   Yo!YO!   YO Yo!
+  Yo!Yo!  yo!yo   Yo!Yo!  Yo!Yo!   Yo!Yo!
+   Yo!YO Yo?YO?   yo Yo!  YO!yo!   Yo?YO?
+     YO Yo!       Yo!Yo!  yo! yo   Yo!Yo! 
+     Yo!Yo!       Yo!Yo!  Yo!Yo!   Yo!Yo!
+     Yo!YO        Yo?YO?  yo YO!   yo!Yo?
+     YO?YO        Yo!yo!  yo Yo!  
+     Yo!Yo!        Yo!Yo!Yo!Yo!    Yo!Yo!   
+     Yo!YO            Yo?YO?       yoYO!
+  </textarea>
+  <p><input id="run" type='button' value='Yo!' /></p>
+</form>
+<textarea id="output" cols="43" rows="2"></textarea>
+<br />
+
+<br />
+<br />
+<p>Wonder how this works? Take a look at the <a href="reference.html">reference manual</a>.</p>
+<br />
+<br />
+  
+  <div class="footer">
+   <a href="http://yolang.org/">yo!lang</a> | <a href="reference.html">Reference Manual</a> | <a target="_blank" href="http://twitter.com/YoLanguage">@YoLanguage</a> | <a class="footer" href="mailto:yolang@yolang.org?Subject=Yo!&body=Yo!" target="_blank">yolang@yolang.org</a> | <a href="http://justyo.co/GROESTL">justyo.co/GROESTL</a> | &copy; 2014<br />
+   <small>The yo!lang is a fun project, inspired by (but not affiliated with) <a href="http://justyo.co">Yo! App</a>, the great zero-character messaging app.</small>
+  </div>
+  <script src="js/lexer.js"></script>
+  <script src="js/yo.js"></script>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script type="text/javascript">
+    $('#run').click(function (e) {
+	e.preventDefault();
+	var code = $('#code').val();
+	var input = $('#input').val();
+	var output;
+	try {
+	  output = run(code, input);
+	}
+	catch (e) {
+	  output = e;
+	}
+	console.log(output);
+	$('#output').val($('#output').val() + output);
+      });
+  </script>
+ </body>
+</html>
